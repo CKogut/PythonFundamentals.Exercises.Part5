@@ -5,4 +5,7 @@ def is_palindrome(value: str) -> bool:
     :param value: A string
     :return: A boolean
     """
-    pass  # remove pass statement and implement me
+    reversed = str[::-1]
+    return reversed
+
+print(is_palindrome("word"))

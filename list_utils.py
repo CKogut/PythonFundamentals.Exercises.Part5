@@ -1,7 +1,7 @@
 import math
 from typing import List
 from math import ceil
-
+from operator import itemgetter
 
 def get_item_at_position(list_in: List, pos: int) -> List:
     """
@@ -33,7 +33,7 @@ def sort_by_commit_count(list_in: List) -> List:
     :return: The same list sorted in ascending order based on the commit count
     """
 
-    result = list_in.sort()
+    result = sorted(list_in, key=itemgetter(1))
     return result
 
 

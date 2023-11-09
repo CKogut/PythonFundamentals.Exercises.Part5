@@ -7,8 +7,7 @@ def is_palindrome(value: str) -> bool:
     """
 
     # Remove any whitespace and convert to lower case
-    value = value.replace(" ","")
-    value = value.lower()
+    value = value.replace(" ","").lower()
 
     # Reverse the string 
     valueR = value[::-1]

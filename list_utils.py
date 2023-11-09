@@ -65,15 +65,28 @@ def half_list(list_in: List, half: int) -> List:
 
     result = []
 
-    half_length = math.ceil(len(list_in) / 2)
+    # If even, find the half point. Then find start and stop for both cases 1 and 2
+    if len(list_in) % 2 == 0:
+        half_mark = int(len(list_in) / 2)
 
-    if half == 1:
-        start = 0
-        stop = half_length
+        if half == 1:
+            start = 0
+            stop = half_mark
+        else:
+            start = half_mark
+            stop = len(list_in)
+    # If odd, find the half point. Then find start and stop for both cases 1 and 2
     else:
-        start = half_length
-        stop = len(list_in)
+        half_mark = ceil(len(list_in) / 2)
 
+        if half == 1:
+            start = 0
+            stop = half_mark
+        else:
+            start = half_mark - 1
+            stop = len(list_in)
+
+    # Create new list from list_in substring
     for x in range(start, stop):
         result.append(list_in[x])
 

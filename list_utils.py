@@ -10,7 +10,7 @@ def get_item_at_position(list_in: List, pos: int) -> List:
     :param pos: Position of desired item in list_in
     :return: Item in pos
     """
-    pass  # remove pass statement and implement me
+    return list_in[pos]
 
 
 def print_list_items(list_in: List) -> None:
@@ -20,7 +20,8 @@ def print_list_items(list_in: List) -> None:
     :param list_in: Input list
     :return: None
     """
-    pass  # remove pass statement and implement me
+    for item in list_in:
+        print(item)
 
 
 def sort_by_commit_count(list_in: List) -> List:
@@ -30,7 +31,7 @@ def sort_by_commit_count(list_in: List) -> List:
     :param list_in: A list where each entry is a list containing a name and the commit count corresponding to a user
     :return: The same list sorted in ascending order based on the commit count
     """
-    pass  # remove pass statement and implement me
+    return sorted[list_in, list_in[1]]
 
 
 def gen_list_of_nums(n: int) -> List[int]:
@@ -40,7 +41,10 @@ def gen_list_of_nums(n: int) -> List[int]:
     :param n: The number of items the result should contain
     :return: A list of integers
     """
-    pass  # remove pass statement and implement me
+    result = []
+    for x in range(n):
+        result.append(x)
+    return result
 
 
 def half_list(list_in: List, half: int) -> List:

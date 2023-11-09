@@ -5,7 +5,16 @@ def is_palindrome(value: str) -> bool:
     :param value: A string
     :return: A boolean
     """
-    reversed = str[::-1]
-    return reversed
 
-print(is_palindrome("word"))
+    # Remove any whitespace and convert to lower case
+    value = value.replace(" ","")
+    value = value.lower()
+
+    # Reverse the string 
+    valueR = value[::-1]
+
+    # Compare the two values
+    if value == valueR:
+        return True
+    else:
+        return False
